@@ -1,18 +1,20 @@
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import HomePage from "./components/HomePage";
-import UserDashboard from "./components/UserDashboard";
-import ImageEditor from "./components/ImageEditor";
-import FinalResult from "./components/FinalResult";
+import Card from "./components/Card";
+import Form from "./components/Form";
+import CardEdit from "./components/CardEdit";
+import FinalCard from "./components/FinalCard";
+import ResultCard from "./components/ResultCard";
 
 const AppRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route path="/edit" element={<UserDashboard />} />
-        <Route path="/test" element={<ImageEditor />} />
-        <Route path="/final" element={<FinalResult />} />
+        <Route path="/" element={<Form />} />
+        <Route path="/card" element={<Card />} />
+        <Route path="/cardedit" element={<CardEdit />} />
+        <Route path="/finalcard" element={<FinalCard />} />
+        <Route path="/share" element={<ResultCard />} />
       </Routes>
     </Router>
   );

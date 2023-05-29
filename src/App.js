@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "./Card.css";
 import AppRouter from "./AppRouter";
 import {CloudinaryContext} from "cloudinary-react";
 
@@ -9,15 +10,13 @@ export const cloudinaryApiSecret = "8IyeYDx4FKIxYEOqUVs6_ldHhM0";
 
 function App() {
   return (
-    <>
-      <CloudinaryContext
-        cloudName={cloudinaryCloudName}
-        apiKey={cloudinaryApiKey}
-        apiSecret={cloudinaryApiSecret}
-      >
-        <AppRouter />
-      </CloudinaryContext>
-    </>
+    <CloudinaryContext
+      cloudName={cloudinaryCloudName}
+      apiKey={cloudinaryApiKey}
+      apiSecret={cloudinaryApiSecret}
+    >
+      <AppRouter />
+    </CloudinaryContext>
   );
 }
 

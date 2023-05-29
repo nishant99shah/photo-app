@@ -1,39 +1,40 @@
 * {
   margin: 0;
   padding: 0;
+  font-weight: 600;
 }
-
-.main {
-  height: 100%;
-  width: 100%;
-}
-
-.container {
-  width: 17%;
-  /* height: 50%; */
-  margin: 10% auto 0;
-  border: 1px solid black;
-  padding: 24px;
+.box {
   background-color: #4472c4;
+  width: 400px;
+  height: 500px;
+  margin: auto;
+  padding: 10px;
+  margin-top: 5%;
+  @media (max-width: 740px) {
+    width: 320px;
+    height: 500px;
+  }
 }
 
-.form-head {
-  margin-bottom: 25px;
-}
-
-.form-class {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.form-input {
+.inputstyle {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0 10px;
+  box-sizing: border-box;
   background-color: #ffc000;
-  border: none;
-  margin-bottom: 15px;
-  height: 25px;
   outline: none;
-  padding: 5px 10px;
+  font-weight: 400;
+}
+
+.inputstyle::placeholder {
+  color: lightslategray;
+  font-weight: 600;
+}
+
+.inputstyle[type="checkbox"] + label {
+  display: inline-block;
+  position: absolute;
+  padding: 8px;
 }
 
 input[type="checkbox"] {
@@ -43,186 +44,32 @@ input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 20px;
-  height: 20px;
+  height: 30px;
   outline: none;
-  background-color: #ed7d31; /* Set the background color to orange */
+  background-color: #ed7d31;
   position: relative;
   cursor: pointer;
 }
 
 input[type="checkbox"]:checked::after {
-  content: "\2714"; /* Set the content to the Unicode character for checkmark */
+  content: "\2714";
   display: block;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white; /* Set the color of the checkmark to white */
-  font-size: 14px;
-  font-weight: bold;
-}
-
-input:nth-of-type(4) {
-  margin-bottom: 30px;
-}
-
-.span1 {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+  color: white;
 }
 
 input[type="submit"] {
-  width: 50%;
-  height: 30px;
-  margin: auto;
+  margin-top: 10px;
+  margin-left: 35%;
+  display: grid;
+  width: 30%;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
   background-color: #70ad47;
-  color: #ffffff;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.photo-editor {
-  /* position: relative;
-  top: 115px;
-  left: 69px; */
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.photo-img {
-  height: 100%;
-  width: 100%;
-}
-
-.zoom {
-  padding: 0;
-  margin-bottom: 0;
-}
-
-.elements {
-  display: flex;
-  align-items: center;
-}
-
-.main-card {
-  width: 20%;
-  /* height: 50%; */
-  margin: 10% auto 0;
-  border: 1px solid black;
-  padding: 24px;
-  background-color: #4472c4;
-}
-
-.card-head {
-  height: 500px;
-}
-
-.card-title {
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.card-main {
-  /* background: url(./img/cardBg.png); */
-  /* background-size: contain;
-  background-repeat: no-repeat; */
-  height: 82%;
-  color: #ffffff;
-  z-index: 1;
-  position: relative;
-  top: -150px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.circle-img {
-  height: 33%;
-  z-index: 2;
-  position: relative;
-  top: 135px;
-  left: 67px;
-}
-
-.add-text {
-  color: #ffffff;
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  top: 55px;
-  right: 60px;
-}
-
-.addPhoto {
-  /* position: relative;
-  top: 185px;
-  right: 55px;
-  cursor: pointer; */
-  color: transparent;
-  background: url(./img/circle.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  height: 40%;
-  width: 53%;
-  position: relative;
-  top: 115px;
-  left: 69px;
-}
-
-input[type="file"] {
-  color: transparent;
-  background: url(./img/circle.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  height: 40%;
-  width: 53%;
-  position: relative;
-  top: 115px;
-  left: 69px;
-}
-
-.editText {
-  position: relative;
-  bottom: 155px;
-  border: 1px solid transparent;
-  width: 53%;
-  height: 35px;
-  outline: none;
-  background-color: red;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  padding: 2px 71px;
-  text-align: center;
-  color: #ffffff;
-}
-
-.editText::placeholder {
-  color: #ffffff;
-  text-align: center;
-}
-
-.btn-css {
-  background-color: #ffc000;
-  height: 28px;
-  width: auto;
-  padding: 5px 12px;
-  border-radius: 20px;
-  outline: none;
   border: 0;
-  display: inline-flex;
-  align-items: center;
-  line-height: 14px;
-  margin: 0px;
-}
-
-.btn-div {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: -10px;
+  cursor: pointer;
 }
